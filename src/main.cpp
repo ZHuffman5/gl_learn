@@ -21,8 +21,8 @@ int main()
     
     try
     {
-        v_shader_file.open("/Users/danluo/Graphics/opengl/preface/shaders/vertex.glsl");
-        f_shader_file.open("/Users/danluo/Graphics/opengl/preface/shaders/fragment.glsl");
+        v_shader_file.open("/Users/danluo/Graphics/opengl/collaboration/gl_learn/shaders/vertex.glsl");
+        f_shader_file.open("/Users/danluo/Graphics/opengl/collaboration/gl_learn/shaders/fragment.glsl");
         std::stringstream v_shader_stream, f_shader_stream;
         v_shader_stream << v_shader_file.rdbuf();
         f_shader_stream << f_shader_file.rdbuf();
