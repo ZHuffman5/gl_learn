@@ -28,5 +28,3 @@ target_link_libraries(${PROJECT_NAME} glfw)
 
 add_subdirectory(libs/glm)
 target_link_libraries(${PROJECT_NAME} glm::glm)
-
-
