@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Build and Run",
+            "type": "shell",
+            "osx": {
+                "command": "scripts/build_run.sh",
+            },
+            "linux": {
+                "command": "scripts/build_run_linux.sh",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "osx": {
+                "command": "scripts/build.sh",
+            },
+            "linux": {
+                "command": "scripts/build_linux.sh",
+            },
+            "problemMatcher": [],
+        }
+    ]
+}
