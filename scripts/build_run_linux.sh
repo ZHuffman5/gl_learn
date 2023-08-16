@@ -7,7 +7,7 @@ then
     rm compile_commands.json
 fi
 
-ln -s out/debug/linux/compile_commands.json
+cp out/debug/linux/compile_commands.json compile_commands.json
 
 out/debug/linux/gl_learn
 
