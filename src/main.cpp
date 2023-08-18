@@ -7,9 +7,9 @@
 #include <fstream>
 
 #define RGB_CONVERT 255
-#define BKG_RED     (255 / RGB_CONVERT)
-#define BKG_GREEN   (255 / RGB_CONVERT)
-#define BKG_BLUE    (255 / RGB_CONVERT)
+#define BKG_RED     (45.0f / RGB_CONVERT)
+#define BKG_GREEN   (223.0f / RGB_CONVERT)
+#define BKG_BLUE    (255.0f / RGB_CONVERT)
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
@@ -26,8 +26,8 @@ int main()
     
     try
     {
-        v_shader_file.open("/Users/danluo/Graphics/opengl/collaboration/gl_learn/shaders/vertex.glsl");
-        f_shader_file.open("/Users/danluo/Graphics/opengl/collaboration/gl_learn/shaders/fragment.glsl");
+        v_shader_file.open("shaders/vertex.glsl");
+        f_shader_file.open("shaders/fragment.glsl");
         std::stringstream v_shader_stream, f_shader_stream;
         v_shader_stream << v_shader_file.rdbuf();
         f_shader_stream << f_shader_file.rdbuf();
