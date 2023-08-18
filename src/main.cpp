@@ -6,6 +6,11 @@
 #include <sstream>
 #include <fstream>
 
+#define RGB_CONVERT 255
+#define BKG_RED     (255 / RGB_CONVERT)
+#define BKG_GREEN   (255 / RGB_CONVERT)
+#define BKG_BLUE    (255 / RGB_CONVERT)
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 void process_input(GLFWwindow* window);
@@ -119,7 +124,7 @@ int main()
     {
         process_input(window);
         
-        glClearColor(0.2f, 0.2f, 0.3f, 1.0f);
+        glClearColor(BKG_RED, BKG_GREEN, BKG_BLUE, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glfwSwapBuffers(window);
