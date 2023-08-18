@@ -26,6 +26,11 @@ int main()
         std::stringstream v_shader_stream, f_shader_stream;
         v_shader_stream << v_shader_file.rdbuf();
         f_shader_stream << f_shader_file.rdbuf();
+        v_shader_file.close();
+        f_shader_file.close();
+        
+        vertex_code = v_shader_stream.str();
+        fragment_code = f_shader_stream.str();
     } catch(std::ifstream::failure e)
     {
         std::cout << "ERROR: Shader file not read successfully" << std::endl;
